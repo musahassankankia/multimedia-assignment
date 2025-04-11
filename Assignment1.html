@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia Group Assignment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
+            text-align: center;
+            padding: 30px;
+            color: #003344;
+        }
+
+        h1 {
+            font-size: 42px;
+            animation: fadeInDown 5s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .group-members {
+            margin: 20px auto;
+            padding: 10px;
+            width: 90%;
+        }
+
+        .group-members p {
+            font-size: 20px;
+            margin: 10px 0;
+            animation: slowSlideUp 4s ease forwards;
+        }
+
+        @keyframes slowSlideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #006699;
+            margin-top: 30px;
+        }
+
+        audio, video {
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        video {
+            width: 400px;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-weight: bold;
+            color: #004455;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Audio (plays 3 minutes then stops) -->
+    <audio id="background-audio" autoplay loop>
+        <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById('background-audio').pause();
+        }, 180000); // 3 minutes
+    </script>
+
+    <!-- Heading -->
+    <h1>Welcome to Our Multimedia Group Assignment</h1>
+
+    <!-- Group Members -->
+    <div class="group-members">
+        <p>Musa Hassan Abubakar - 23/5111B/0065</p>
+        <p>Sadiq Zakariya Idris - 23/5111A/0019</p>
+        <p>Sadiya Sanusi Isah - 23/5111B/0073</p>
+        <p>Fatima Sanusi Isah - 23/5111B/0074</p>
+        <p>Zainab Zubairu - 23/5111A/0019</p>
+    </div>
+
+    <!-- Audio Component -->
+    <h2>Audio Component</h2>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video Component -->
+    <h2>Video Component</h2>
+    <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Footer -->
+    <footer>
+        Group Assignment – 2025
+        <br><br>
+        <!-- Valid HTML icon (not clickable) -->
+        <img src="https://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01!" height="31" width="88">
+        <p><small>Note: Icon confirms HTML validity. May not link unless hosted online.</small></p>
+    </footer>
+
+</body>
+</html>
